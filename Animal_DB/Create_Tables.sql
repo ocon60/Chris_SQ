@@ -42,19 +42,19 @@ CREATE TABLE SCOTT.SPEC
 /* Sample Data for SCOTT.PETS */
 
 INSERT INTO SCOTT.PETS
-VALUES ('Archie', 'Archibald', '2001-05-23', 450, 'Dog', 'Terrier', 13, 2, 15, 'y');
+VALUES ('Archie', 'Archibald', date '2001-05-23', 450, 'Dog', 'Terrier', 13, 2, 15, 'y');
 INSERT INTO SCOTT.PETS
-VALUES ('Fide', 'Fidoleous', '2002-05-27', 350, 'Dog', 'Boxer', 7, 1.5, 12, 'y');
+VALUES ('Fide', 'Fidoleous', date '2002-05-27', 350, 'Dog', 'Boxer', 7, 1.5, 12, 'y');
 INSERT INTO SCOTT.PETS
-VALUES ('Cookie', 'Baspingus', '2003-06-01', 1000, 'Bird', 'Barn Owl', 3, 3, 7, 'n');
+VALUES ('Cookie', 'Baspingus', date '2003-06-01', 1000, 'Bird', 'Barn Owl', 3, 3, 7, 'n');
 INSERT INTO SCOTT.PETS
-VALUES ('Dolph', 'Rudolph', '2000-11-23', 1750, 'Deer', 'North American', 2, 5, 175, 'y');
+VALUES ('Dolph', 'Rudolph', date'2000-11-23', 1750, 'Deer', 'North American', 2, 5, 175, 'y');
 INSERT INTO SCOTT.PETS
-VALUES ('Smoky', 'Smoky Bear', '2011-09-20', 1100, 'Bear', 'Kodiak', 5, 11, 2575, 'n');
+VALUES ('Smoky', 'Smoky Bear', date'2011-09-20', 1100, 'Bear', 'Kodiak', 5, 11, 2575, 'n');
 INSERT INTO SCOTT.PETS
-VALUES ('Fex', 'Archfelix', '1995-05-23', 200, 'Cat', 'Siamese', 20, 2, 10, 'y');
+VALUES ('Fex', 'Archfelix',date '1995-05-23', 200, 'Cat', 'Siamese', 20, 2, 10, 'y');
 INSERT INTO SCOTT.PETS
-VALUES ('Sam', 'Uncle Sam', '2014-09-02', 1776, 'Bird', 'Bald Eagle', 1, 4, 15, 'y');
+VALUES ('Sam', 'Uncle Sam', date'2014-09-02', 1776, 'Bird', 'Bald Eagle', 1, 4, 15, 'y');
 
 /* Sample Data for SCOTT.SPEC */
 
