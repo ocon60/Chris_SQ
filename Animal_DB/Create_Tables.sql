@@ -1,6 +1,6 @@
 /* Create Christian (CO) user with no password requirement */
 
-CREATE USER "Christian" IDENTIFIED BY "CO"; /* WARNING!! INSUFFICIENT PRIVILEGES FOR Admin1 VM!!! */
+/*CREATE USER "Christian" IDENTIFIED BY "CO";  WARNING!! INSUFFICIENT PRIVILEGES FOR Admin1 VM!!! */
 
 /* Animal Breeder Database Tables + Sample Rows */
 
