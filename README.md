@@ -1,9 +1,15 @@
 Chris_SQ
 ========
 
-SQL for ETL testing.
+#SQL for ETL testing
+##Intended only to be edited by CO and JP
+-----------------------------------------
+###**Stuff to Do:**
+[]Make 1 or 2 RDBs for Informatica Testing
+	[]Modify/Creat tables in each RDB to be able to be transformed by most transform operations
+[]Stored Procedures
+[]Sequencing 
 
-•Notes to self:
-	► Make subfolders for different RDBs
-	► Make sure to save the state of the VM instead of shutdown or power off
-	► Try creating different owners (e.g. instead of scott.empno, try Christian.breeds)
+
+
+
