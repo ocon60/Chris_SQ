@@ -17,8 +17,8 @@ CREATE TABLE SCOTT.PETS
   PBREED           VARCHAR2(15 BYTE),
   PAGE             NUMBER(5),
   PHGT             NUMBER(5),
-  PWGT			   NUMBER(5),
-  PSHOTS           VARCHAR2(1 BYTE),  /* Shots, yes or no (Y/N)*/
+  PWGT			       NUMBER(5),
+  PSHOTS           VARCHAR2(1 BYTE)  /* Shots, yes or no (Y/N)*/
 );
 
 CREATE TABLE SCOTT.SPEC
@@ -27,7 +27,7 @@ CREATE TABLE SCOTT.SPEC
   SAVGLIFE        NUMBER(5),
   SAVGCOST        NUMBER(5), /* Average care cost per month */
   SAVGHGT         NUMBER(5),
-  SAVGWGT         NUMBER(5),
+  SAVGWGT         NUMBER(5)
   );
   
  CREATE TABLE SCOTT.BREED
@@ -36,7 +36,7 @@ CREATE TABLE SCOTT.SPEC
    BAVGLIFE       NUMBER(5),
    BAVGCOST       NUMBER(5),
    BABGHGT        NUMBER(5),
-   SAVGWGT        NUMBER(5),
+   SAVGWGT        NUMBER(5)
    );
    
 /* Sample Data for SCOTT.PETS */
