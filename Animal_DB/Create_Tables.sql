@@ -75,7 +75,7 @@ VALUES ('Dog', 25, 500, 3, 50);           /* Sample duplicate */
 
 /* Sample Data for SCOTT.BREED */
 
-INSERT INTO SCOTT.SPEC
+INSERT INTO SCOTT.BREED
 VALUES ('Terrier', 20, 450, 1, 20);
 INSERT INTO SCOTT.SPEC
 VALUES ('Newfoundland', 13, 600, 4, 180); 
