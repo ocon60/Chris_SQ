@@ -1,5 +1,4 @@
 #SQL for ETL testing
-##◄Intended only to be edited by CO and JP
 -----------------------------------------
 ![Informatica Logo](http://www.centroformazioneathena.it/images/icon1.jpg)
 ###**Stuff to Do:**
