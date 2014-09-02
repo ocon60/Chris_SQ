@@ -1,0 +1,7 @@
+Here is the difference between different forms of deleting data
+
+delete * from WC_HR_ATTEND_F where....
+
+truncate table WC_HR_ATTEND_F;
+
+DROP TABLE QA_DW.WC_HR_ATTEND_F;

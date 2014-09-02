@@ -1,0 +1,130 @@
+Describe Primary Key, Foreighn Keys
+
+ALTER TABLE QA_DW.WC_HR_ATTEND_F ADD (
+  PRIMARY KEY
+  (INTEGRATION_ID)
+  USING INDEX
+    TABLESPACE QA_DW_DATA
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          5M
+                NEXT             5M
+                MINEXTENTS       1
+                MAXEXTENTS       UNLIMITED
+                PCTINCREASE      0
+               ));
+
+ALTER TABLE QA_DW.WC_HR_ATTEND_FS ADD (
+  PRIMARY KEY
+  (INTEGRATION_ID)
+  USING INDEX
+    TABLESPACE QA_DW_DATA
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          5M
+                NEXT             5M
+                MINEXTENTS       1
+                MAXEXTENTS       UNLIMITED
+                PCTINCREASE      0
+               ));
+               
+               
+ALTER TABLE QA_DW.WC_HR_DEPT_D ADD (
+  PRIMARY KEY
+  (INTEGRATION_ID)
+  USING INDEX
+    TABLESPACE QA_DW_DATA
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          5M
+                NEXT             5M
+                MINEXTENTS       1
+                MAXEXTENTS       UNLIMITED
+                PCTINCREASE      0
+               ));
+ALTER TABLE QA_DW.WC_HR_EARNCODE_D ADD (
+  PRIMARY KEY
+  (INTEGRATION_ID)
+  USING INDEX
+    TABLESPACE QA_DW_DATA
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          5M
+                NEXT             5M
+                MINEXTENTS       1
+                MAXEXTENTS       UNLIMITED
+                PCTINCREASE      0
+               ));
+ALTER TABLE QA_DW.WC_HR_EMP_JOB_D ADD (
+  PRIMARY KEY
+  (INTEGRATION_ID)
+  USING INDEX
+    TABLESPACE QA_DW_DATA
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          5M
+                NEXT             5M
+                MINEXTENTS       1
+                MAXEXTENTS       UNLIMITED
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE QA_DW.WC_HR_JOB_CODE_D ADD (
+  PRIMARY KEY
+  (INTEGRATION_ID)
+  USING INDEX
+    TABLESPACE QA_DW_DATA
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          5M
+                NEXT             5M
+                MINEXTENTS       1
+                MAXEXTENTS       UNLIMITED
+                PCTINCREASE      0
+               ));
+
+ALTER TABLE QA_DW.WC_HR_UNION_D ADD (
+  PRIMARY KEY
+  (INTEGRATION_ID)
+  USING INDEX
+    TABLESPACE QA_DW_DATA
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          5M
+                NEXT             5M
+                MINEXTENTS       1
+                MAXEXTENTS       UNLIMITED
+                PCTINCREASE      0
+               ));
+
+
+ALTER TABLE QA_DW.WC_HR_UNION_D1 ADD (
+  PRIMARY KEY
+  (INTEGRATION_ID)
+  USING INDEX
+    TABLESPACE QA_DW_DATA
+    PCTFREE    10
+    INITRANS   2
+    MAXTRANS   255
+    STORAGE    (
+                INITIAL          5M
+                NEXT             5M
+                MINEXTENTS       1
+                MAXEXTENTS       UNLIMITED
+                PCTINCREASE      0
+               ));

@@ -1,0 +1,80 @@
+
+
+
+Ex1
+As excercise, find all the tables in your database
+
+Ex2
+ select all rows, all columns in one table
+
+Ex3
+select 1 row , 1 column using where clause criteria
+ 
+ Ex4
+ 
+ Select multiple rows from one table and sort it in ascending order
+  
+ Select multiple rows from one table and sort it in descending order
+ 
+ 
+ Ex4 
+  select multiple rows from multiple tables and join by key fiels 
+  
+  Describe table below
+ 
+ 
+ 
+ SELECT
+F.EMPLID AS EMPLID,
+F.EARNING_DATE AS EARNING_DATE,
+SUBSTR(F.INTEGRATION_ID, 17,3) AS EARNING_CODE,
+F.INTEGRATION_ID, 
+SUBSTR(F.INTEGRATION_ID, 21,5) AS DEPT,
+F.INTEGRATION_ID AS INTEGRATION_ID2,
+F.FLAG AS FLAG
+FROM
+WC_HR_ATTEND_F F
+order by 1, 2;
+ 
+ challenge - describe what this sql is doing
+ 
+ select sum(T90350.X_VCHR_DSCNT_PAY_AMT) as c1,
+     sum(case  when T90350.X_VCHR_PYMNT_GROSS_AMT is null then 0 else T90350.X_VCHR_PYMNT_GROSS_AMT end ) as c2,
+     --sum(case  when T90350.X_VCHR_PYMNT_GROSS_AMT >0 then T90350.X_VCHR_PYMNT_GROSS_AMT end ) as c2,
+     sum(case  when T90350.X_PAID_AMT is null then 0 else T90350.X_PAID_AMT end ) as c3,
+     T90350.X_VCHR_ACCT_DT as c4,
+     T90350.X_DISCOUNT_DUE_DT as c5,
+     T90350.PURCH_ORDER_NUM as c6,
+    -- T90350.X_PURCH_ORDER_NUM as c61,
+     T90350.INTEGRATION_ID as c62,
+     T97778.DAY_DT as c7,
+     T158070.NAME as c8,
+     T176037.SUPPLIER_NUM as c9,
+     T90350.X_PAYMENT_DT as c10,
+     T115953.AP_TERM_CODE as c11,
+     T90350.PURCH_INVOICE_NUM as c12,
+     T90350.X_VOUCHER_ID as c13,
+     T97778.DATE_KEY as c14
+from 
+     W_AP_TERMS_D T115953 /* Dim_W_AP_TERMS_D */ ,
+     W_PARTY_D T158070 /* Dim_W_PARTY_D_Supplier */ ,
+     W_PARTY_ORG_D T176037 /* Dim_W_PARTY_ORG_D_Supplier */ ,
+     W_DAY_D T97778 /* Dim_W_DAY_D_Sales_Invoiced_Date */ ,
+     W_INT_ORG_D T111515 /* Dim_W_INT_ORG_D_Company */ ,
+     W_AP_XACT_F T90350 /* Fact_W_AP_XACT_F */ 
+where  ( T90350.SUPPLIER_WID = T158070.ROW_WID and T90350.COMPANY_ORG_WID = T111515.ROW_WID and T90350.PAY_TERMS_WID = T115953.ROW_WID and T90350.INVOICED_ON_DT_WID = T97778.ROW_WID and T90350.DELETE_FLG = 'N' and 
+--T111515.ORG_NAME like '%' and 
+--T111515.COMPANY_FLG = 'Y' and 
+T158070.NAME = '1 MORE YRD INC' and T158070.PARTY_ORG_WID = T176037.ROW_WID and (T158070.SUPPLIER_FLG in ('U', 'Y')) 
+--and (T115953.AP_TERM_CODE in ('INSUR~1/10', 'INSUR~1/20', 'INSUR~115', 'INSUR~11545', 'INSUR~11560', 'INSUR~1D00', 'INSUR~1D30', 'INSUR~1DN45', 'INSUR~21020', 'INSUR~21060', 'INSUR~21530', 'INSUR~21545', 'INSUR~21560', 'INSUR~230', 'INSUR~25D15', 'INSUR~2D', 'INSUR~2D20', 'INSUR~2DN45', 'INSUR~5/15', 'INSUR~50D00', 'INSUR~50D30', 'INSUR~630', 'INSUR~75D00', 'INSUR~75D10', 'INSUR~75D15', 'INSUR~75D21', 'INSUR~75D30')) 
+AND T115953.AP_TERM_CODE = '21560~INSUR' 
+) 
+group by T90350.INTEGRATION_ID,
+--T90350.X_PURCH_ORDER_NUM,
+T90350.PURCH_ORDER_NUM, T90350.PURCH_INVOICE_NUM, T90350.X_VOUCHER_ID, T90350.X_DISCOUNT_DUE_DT, T90350.X_VCHR_ACCT_DT, T90350.X_PAYMENT_DT, T97778.DAY_DT, T97778.DATE_KEY, 
+T115953.AP_TERM_CODE, 
+T158070.NAME, T176037.SUPPLIER_NUM
+ORDER BY c4;
+
+
+
