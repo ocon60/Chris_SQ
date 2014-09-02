@@ -1,12 +1,12 @@
 /* Create Christian (CO) user with no password requirement */
 
-CREATE USER "CO"; /* WARNING!! INSUFFICIENT PRIVILEGES FOR Admin1 VM!!! */
+CREATE USER "Christian" IDENTIFIED BY "CO"; /* WARNING!! INSUFFICIENT PRIVILEGES FOR Admin1 VM!!! */
 
 /* Animal Breeder Database Tables + Sample Rows */
 
 /* List of Pets with description */
 
-CREATE TABLE CO.PETS
+CREATE TABLE SCOTT.PETS
 (
   PNICK            VARCHAR2(15 BYTE)  NOT NULL,
   PFULLNAME        VARCHAR2(15 BYTE),
@@ -21,7 +21,7 @@ CREATE TABLE CO.PETS
   PSHOTS           VARCHAR2(1 BYTE),  /* Shots, yes or no (Y/N)*/
 );
 
-CREATE TABLE CO.SPEC
+CREATE TABLE SCOTT.SPEC
 (
   SNAME           VARCHAR(15)  NOT NULL,
   SAVGLIFE        NUMBER(5),
@@ -30,7 +30,7 @@ CREATE TABLE CO.SPEC
   SAVGWGT         NUMBER(5),
   );
   
- CREATE TABLE CO.BREED
+ CREATE TABLE SCOTT.BREED
  (
    BNAME          VARCHAR(15)  NOT NULL,
    BAVGLIFE       NUMBER(5),
@@ -39,7 +39,7 @@ CREATE TABLE CO.SPEC
    SAVGWGT        NUMBER(5),
    );
    
-/* Sample Data for CO.PETS */
+/* Sample Data for SCOTT.PETS */
 
 INSERT INTO CO.PETS
 VALUES ('Archie', 'Archibald', '2001-05-23', 450, 'Dog', 'Terrier', 13, 2, 15, 'y');
@@ -56,7 +56,7 @@ VALUES ('Fex', 'Archfelix', '1995-05-23', 200, 'Cat', 'Siamese', 20, 2, 10, 'y')
 INSERT INTO CO.PETS
 VALUES ('Sam', 'Uncle Sam', '2014-09-02', 1776, 'Bird', 'Bald Eagle', 1, 4, 15, 'y');
 
-/* Sample Data for CO.SPEC */
+/* Sample Data for SCOTT.SPEC */
 
 INSERT INTO CO.SPEC
 VALUES ('Dog', 25, 500, 3, 50);
@@ -73,7 +73,7 @@ VALUES ('Lizard', 35.5, 300, 2.2, 12);
 INSERT INTO CO.SPEC
 VALUES ('Dog', 25, 500, 3, 50);           /* Sample duplicate */
 
-/* Sample Data for CO.BREED */
+/* Sample Data for SCOTT.BREED */
 
 INSERT INTO CO.SPEC
 VALUES ('Terrier', 20, 450, 1, 20);
